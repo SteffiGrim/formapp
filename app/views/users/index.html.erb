@@ -1,0 +1,28 @@
+<h1>Usuarios Registrados</h1>
+
+<p>Cantidad total de registros: <strong><%= @user_count %></strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre Completo</th>
+      <th>Correo Electrónico</th>
+      <th>Número Telefónico</th>
+      <th>Número de Documento</th>
+      <th>Dirección</th>
+      <th>Comentarios</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.full_name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.phone %></td>
+        <td><%= user.document_number %></td>
+        <td><%= user.address %></td>
+        <td><%= user.comments %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
